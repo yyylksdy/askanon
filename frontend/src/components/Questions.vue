@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class='QnA'>
-      <div class='question' @click='toggleVisibilty()'>
+      <div id='question' @click='toggleVisibilty'>
         <slot></slot>
       </div>
       <div v-if='visible'>
@@ -23,13 +23,18 @@ import Answers from './Answers.vue'
 
 export default {
   name: 'Question',
-  props: ['question'],
+  props: {
+    question: {
+      type: String,
+      required: true
+    }
+  },
   data: () => ({
     visible: false,
     newAnswer: ''
   }),
   methods: {
-    toggleVisibilty: function () {
+    toggleVisibilty () {
       console.log('Visibility toggled')
       this.visible = !this.visible
     }
@@ -41,7 +46,7 @@ export default {
 </script>
 
 <style>
-.question{
+#question{
     padding-bottom: 20px;
     padding-top: 20px;
     padding-right: 40px;
