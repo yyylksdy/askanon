@@ -9,15 +9,15 @@ describe('Questions.spec.js', () => {
   describe('Properties', () => {
     it('has a question property', () => {
       cmp = createCmp({ question: 'hey' })
-      expect(cmp.hasProp('question', 'hey')).toBeTruthy()
+      expect(cmp.props('question', 'hey')).toBeTruthy()
     })
 
     describe('Validation', () => {
       const question = createCmp().vm.$options.props.question
 
-      it('question is of type string', () => {
+      it('question is of type Object', () => {
         console.log(question)
-        expect(question.type).toBe(String)
+        expect(question.type).toBe(Object)
       })
 
       it('qustion is required', () => {
