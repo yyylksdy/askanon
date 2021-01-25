@@ -8,10 +8,6 @@
         <Answers v-for='(answer, i) in question.answers' :key="i+answer+question.myid" class="answer">
             Answer: {{ answer }}
         </Answers>
-        <div class='ansBox'>
-            <input type="anstext" v-model='newAnswer' placeholder="Answer...">
-            <!-- <button class="button" @click="postAnswer()">Post</button> -->
-        </div>
       </div>
     </div>
     <br>

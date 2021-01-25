@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "vue": "^2.5.2",
+    "vue-loading-overlay": "^3.4.2",
     "vue-router": "^3.0.1",
     "vue-test-utils": "^1.0.0-beta.11",
     "vuex": "^3.6.0"
@@ -55,7 +56,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
-    "jsdom": "16.4.0",
+    "jsdom": "10.0.0",
     "jsdom-global": "3.0.2",
     "nightwatch": "^0.9.12",
     "node-notifier": "^5.1.2",
